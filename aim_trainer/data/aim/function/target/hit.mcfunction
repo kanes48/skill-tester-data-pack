@@ -1,0 +1,22 @@
+# Prevent multiple hits from counting simultaneously.
+execute unless score #running aim_data matches 1 run return 0
+
+# Increase the player's score.
+scoreboard players add @s aim_score 1
+
+# Kill the arrows already stuck in the wall to prevent multi activation
+kill @e[type=minecraft:arrow]
+
+# Clear the player's inventory
+clear @s
+# Give the player a loaded crossbow (hit reward)
+give @s minecraft:crossbow[minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1}]]
+
+# Play a hit sound.
+playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1
+
+# Spawn hit particles.
+particle minecraft:happy_villager ~ ~1 ~ 0.3 0.3 0.3 0.05 10
+
+# Move the target.
+function aim:target/spawn

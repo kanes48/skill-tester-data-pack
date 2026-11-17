@@ -1,13 +1,13 @@
-[00:02:22] [Server thread/INFO]: SubToKanes issued server command: /give @a minecraft:command_block
-[00:02:22] [Server thread/INFO]: System chat: [SubToKanes: Gave 1 [Command Block] to SubToKanes]
+[00:02:22] [Server thread/INFO]: @p issued server command: /give @a minecraft:command_block
+[00:02:22] [Server thread/INFO]: System chat: [@p: Gave 1 [Command Block] to @p]
 [00:02:39] [Server thread/INFO]: [Not Secure] [@] 3
 [00:02:50] [Server thread/INFO]: [Not Secure] [@] 3
 [00:02:52] [Server thread/INFO]: [Not Secure] [@] 3
 [00:02:53] [Server thread/INFO]: [Not Secure] [@] 3
-[00:03:51] [Server thread/INFO]: SubToKanes issued server command: //cut
-[00:03:52] [Server thread/INFO]: System chat: [SubToKanes: Set own game mode to Spectator Mode]
-[00:03:57] [Server thread/INFO]: System chat: [SubToKanes: Set own game mode to Creative Mode]
-[00:22:50] [Server thread/INFO]: SubToKanes issued server command: /reload
+[00:03:51] [Server thread/INFO]: @p issued server command: //cut
+[00:03:52] [Server thread/INFO]: System chat: [@p: Set own game mode to Spectator Mode]
+[00:03:57] [Server thread/INFO]: System chat: [@p: Set own game mode to Creative Mode]
+[00:22:50] [Server thread/INFO]: @p issued server command: /reload
 [00:22:50] [Server thread/WARN]: Error reading pack metadata, attempting fallback type
 com.google.gson.JsonParseException: com.google.gson.stream.MalformedJsonException: Unescaped control characters (\u0000-\u001F) are not allowed in strict mode at line 3 column 21 path $.pack.description
 See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
@@ -110,7 +110,7 @@ See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
 	at com.google.gson.internal.bind.TypeAdapters$33$1.read(TypeAdapters.java:1060) ~[gson-2.14.0.jar:?]
 	at net.minecraft.util.GsonHelper.fromJson(GsonHelper.java:437) ~[paper-26.3.jar:26.3-249-1a995d6]
 	... 36 more
-[00:22:50] [Server thread/INFO]: System chat: [SubToKanes: Reloading!]
+[00:22:50] [Server thread/INFO]: System chat: [@p: Reloading!]
 [00:22:54] [Worker-Main-1/INFO]: Loaded 1866 advancements
 [00:22:54] [Server thread/ERROR]: Failed to load function aim:game/end
 java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Whilst parsing command on line 7: Expected literal B at position 19: ...subtitle [<--[HERE]
@@ -131,11 +131,11 @@ Caused by: java.lang.IllegalArgumentException: Whilst parsing command on line 7:
 	at net.minecraft.server.ServerFunctionLibrary.lambda$reload$3(ServerFunctionLibrary.java:91) ~[paper-26.3.jar:26.3-249-1a995d6]
 	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789) ~[?:?]
 	... 8 more
-[00:23:06] [Server thread/INFO]: SubToKanes issued server command: /function aim:start
-[00:23:06] [Server thread/INFO]: System chat: [SubToKanes: Running function aim:start]
-[00:24:32] [Server thread/INFO]: SubToKanes issued server command: /kill @e[type=minecraft:arrow]
-[00:24:32] [Server thread/INFO]: System chat: [SubToKanes: Killed 8 entities]
-[00:24:45] [Server thread/INFO]: SubToKanes issued server command: /function aim:stop
-[00:24:45] [Server thread/INFO]: System chat: [SubToKanes: Running function aim:stop]
-[00:25:00] [Server thread/INFO]: SubToKanes issued server command: //cut
-[00:25:44] [Server thread/INFO]: SubToKanes issued server command: //set jack_o_lantern
+[00:23:06] [Server thread/INFO]: @p issued server command: /function aim:start
+[00:23:06] [Server thread/INFO]: System chat: [@p: Running function aim:start]
+[00:24:32] [Server thread/INFO]: @p issued server command: /kill @e[type=minecraft:arrow]
+[00:24:32] [Server thread/INFO]: System chat: [@p: Killed 8 entities]
+[00:24:45] [Server thread/INFO]: @p issued server command: /function aim:stop
+[00:24:45] [Server thread/INFO]: System chat: [@p: Running function aim:stop]
+[00:25:00] [Server thread/INFO]: @p issued server command: //cut
+[00:25:44] [Server thread/INFO]: @p issued server command: //set jack_o_lantern

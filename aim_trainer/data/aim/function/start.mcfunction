@@ -20,6 +20,9 @@ bossbar set aim:timer visible true
 function aim:build
 function aim:target/spawn
 
+give @a minecraft:crossbow[minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1}]] 1
+give @a minecraft:arrow 64
+
 # Announce the start.
 title @s title {"text":"AIM TRAINER","color":"gold"}
 title @s subtitle {"text":"30 seconds!","color":"yellow"}

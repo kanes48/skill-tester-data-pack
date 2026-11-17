@@ -10,7 +10,8 @@ kill @e[type=minecraft:arrow]
 # Clear the player's inventory
 clear @s
 # Give the player a loaded crossbow (hit reward)
-give @s minecraft:crossbow[minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1}]]
+give @a minecraft:crossbow[minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1}]] 1
+give @a minecraft:arrow 64
 
 # Play a hit sound.
 playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1

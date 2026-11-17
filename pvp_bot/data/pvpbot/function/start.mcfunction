@@ -11,10 +11,25 @@ tag @s add pvpbot.player
 scoreboard players set #active pvpbot_state 0
 
 # Spawn bot four blocks in front of player
-summon minecraft:wither_skeleton 10 47 -104 {Tags:["pvpbot.bot"],PersistenceRequired:1b,CanPickUpLoot:0b,CustomName:{text:"PvP Bot",color:"red",bold:true},CustomNameVisible:1b}
+summon minecraft:wither_skeleton 121 108 -55 {Tags:["pvpbot.bot"],PersistenceRequired:1b,CanPickUpLoot:0b,CustomName:{text:"PvP Bot",color:"red",bold:true},CustomNameVisible:1b}
 
 # Configure bot
 execute as @e[tag=pvpbot.bot,limit=1,sort=nearest] run function pvpbot:setup_bot
+
+# Initialize player's death counter
+scoreboard players add @s pvpbot_deaths 0
+
+# Save death count at the beginning of the fight
+scoreboard players operation #start_deaths pvpbot_deaths = @s pvpbot_deaths
+
+# Assign bossbar to fighting player
+bossbar set pvpbot:health players @s
+
+# Show bossbar
+bossbar set pvpbot:health visible true
+
+# Set bossbar to full health
+bossbar set pvpbot:health value 200
 
 # Activate fight
 scoreboard players set #active pvpbot_state 1

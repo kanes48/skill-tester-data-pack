@@ -17,7 +17,7 @@ clear @p
 
 effect clear @p
 
-tp @p 75 51 -13
+tp @p 42 58 -8
 
 # Remove the player tag.
 tag @s remove aim_player

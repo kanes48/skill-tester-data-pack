@@ -1,6 +1,6 @@
 # Health: 100 HP
-attribute @s minecraft:max_health base set 200
-data merge entity @s {Health:200.0f}
+attribute @s minecraft:max_health base set 125.0
+data merge entity @s {Health:125.0}
 
 # Attack damage: 12
 attribute @s minecraft:attack_damage base set 17

@@ -16,8 +16,5 @@ give @a minecraft:arrow 64
 # Play a hit sound.
 playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1
 
-# Spawn hit particles.
-particle minecraft:happy_villager ~ ~1 ~ 0.3 0.3 0.3 0.05 10
-
 # Move the target.
 function aim:target/spawn

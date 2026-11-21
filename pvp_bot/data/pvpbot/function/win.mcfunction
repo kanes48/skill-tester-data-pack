@@ -15,7 +15,7 @@ clear @p
 
 effect clear @p
 
-tp @p 75 51 -13
+tp @p 42 58 -8
 
 # Show bossbar
 bossbar set pvpbot:health visible false

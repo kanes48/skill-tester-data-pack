@@ -29,7 +29,7 @@ bossbar set pvpbot:health players @s
 bossbar set pvpbot:health visible true
 
 # Set bossbar to full health
-bossbar set pvpbot:health value 200
+bossbar set pvpbot:health value 125
 
 # Activate fight
 scoreboard players set #active pvpbot_state 1

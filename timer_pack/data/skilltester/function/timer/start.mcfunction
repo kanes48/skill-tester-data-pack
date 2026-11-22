@@ -21,6 +21,3 @@ scoreboard players set @s timer_millis 0
 
 # Start timer
 scoreboard players set @s timer_running 1
-
-# Confirmation
-$tellraw @s {"text":"Started timer: $(id)","color":"green"}

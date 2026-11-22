@@ -37,11 +37,20 @@ execute if entity @s[tag=timer_active] if score @s timer_running matches 1 if sc
 
 execute if entity @s[tag=timer_active] if score @s timer_running matches 1 if score #new_best timer_work matches 1 if score #display_millis timer_work matches 100..950 run title @s subtitle [{"text":"Best time: ","color":"white"},{"score":{"name":"#display_seconds","objective":"timer_work"},"color":"yellow"},{"text":"."},{"score":{"name":"#display_millis","objective":"timer_work"},"color":"yellow"},{"text":" s","color":"yellow"}]
 
-# Finish timer
-execute if entity @s[tag=timer_active] if score @s timer_running matches 1 run tellraw @s {"text":"Timer stopped. Challenge completed.","color":"green"}
+# Finish timer - Convert final time
+$execute if entity @s[tag=timer_active,tag=timer_id_$(id)] if score @s timer_running matches 1 run function skilltester:timer/convert
 
-execute if entity @s[tag=timer_active] run scoreboard players set @s timer_running 0
+# Display final time (000 milliseconds)
+$execute if entity @s[tag=timer_active,tag=timer_id_$(id)] if score @s timer_running matches 1 if score #display_millis timer_work matches 0 run tellraw @s [{"text":"Challenge completed - Final Time: ","color":"green"},{"score":{"name":"#display_seconds","objective":"timer_work"},"color":"yellow"},{"text":".000 s","color":"yellow"}]
+
+# Display final time (050 milliseconds)
+$execute if entity @s[tag=timer_active,tag=timer_id_$(id)] if score @s timer_running matches 1 if score #display_millis timer_work matches 50 run tellraw @s [{"text":"Challenge completed - Final Time: ","color":"green"},{"score":{"name":"#display_seconds","objective":"timer_work"},"color":"yellow"},{"text":".050 s","color":"yellow"}]
+
+# Display final time (100-950 milliseconds)
+$execute if entity @s[tag=timer_active,tag=timer_id_$(id)] if score @s timer_running matches 1 if score #display_millis timer_work matches 100..950 run tellraw @s [{"text":"Challenge completed - Final Time: ","color":"green"},{"score":{"name":"#display_seconds","objective":"timer_work"},"color":"yellow"},{"text":".","color":"yellow"},{"score":{"name":"#display_millis","objective":"timer_work"},"color":"yellow"},{"text":" s","color":"yellow"}]
+
+# Stop timer
+$execute if entity @s[tag=timer_active,tag=timer_id_$(id)] run scoreboard players set @s timer_running 0
 
 tag @s remove timer_active
-
 $tag @s remove timer_id_$(id)

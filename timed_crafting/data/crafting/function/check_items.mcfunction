@@ -48,9 +48,13 @@ execute unless score @s temp matches 1.. run scoreboard players set @s items_rea
 execute store result score @s temp run clear @s minecraft:ender_eye 0
 execute unless score @s temp matches 12.. run scoreboard players set @s items_ready 0
 
-# Ender Eyes
+# Beds
 execute store result score @s temp run clear @s minecraft:white_bed 0
 execute unless score @s temp matches 5.. run scoreboard players set @s items_ready 0
+
+# Anchors
+execute store result score @s temp run clear @s minecraft:respawn_anchor 0
+execute unless score @s temp matches 3.. run scoreboard players set @s items_ready 0
 
 # Remove everything if all requirements are met
 execute if score @s items_ready matches 1 run function crafting:win

@@ -3,9 +3,6 @@ scoreboard objectives add aim_score dummy
 scoreboard objectives add aim_timer dummy
 scoreboard objectives add aim_data dummy
 
-# Display the score in the sidebar.
-scoreboard objectives setdisplay sidebar aim_score
-
 # Initialize game state.
 scoreboard players set #running aim_data 0
 scoreboard players set #ticks aim_data 0

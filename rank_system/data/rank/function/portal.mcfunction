@@ -5,12 +5,14 @@ execute unless data storage skilltester:timers best.portal run data modify entit
 execute if data storage skilltester:timers best.portal store result score #rank_time timer_work run data get storage skilltester:timers best.portal 1
 
 # Determine rank and update display
-execute if data storage skilltester:timers best.portal if score #rank_time timer_work matches ..199 run data modify entity @e[type=minecraft:text_display,tag=portal_rank_display,limit=1] text set value {"text":"TAS","color":"gold","bold":true}
+execute if data storage skilltester:timers best.portal if score #rank_time timer_work matches ..139 run data modify entity @e[type=minecraft:text_display,tag=portal_rank_display,limit=1] text set value {"text":"TAS","color":"gold","bold":true}
 
-execute if data storage skilltester:timers best.portal if score #rank_time timer_work matches 200..249 run data modify entity @e[type=minecraft:text_display,tag=portal_rank_display,limit=1] text set value {"text":"PRO","color":"green","bold":true}
+execute if data storage skilltester:timers best.portal if score #rank_time timer_work matches 140..169 run data modify entity @e[type=minecraft:text_display,tag=portal_rank_display,limit=1] text set value {"text":"S","color":"green","bold":true}
 
-execute if data storage skilltester:timers best.portal if score #rank_time timer_work matches 250..299 run data modify entity @e[type=minecraft:text_display,tag=portal_rank_display,limit=1] text set value {"text":"DECENT","color":"aqua","bold":true}
+execute if data storage skilltester:timers best.portal if score #rank_time timer_work matches 170..209 run data modify entity @e[type=minecraft:text_display,tag=portal_rank_display,limit=1] text set value {"text":"A","color":"aqua","bold":true}
 
-execute if data storage skilltester:timers best.portal if score #rank_time timer_work matches 300..399 run data modify entity @e[type=minecraft:text_display,tag=portal_rank_display,limit=1] text set value {"text":"BEGINNER","color":"yellow","bold":true}
+execute if data storage skilltester:timers best.portal if score #rank_time timer_work matches 210..279 run data modify entity @e[type=minecraft:text_display,tag=portal_rank_display,limit=1] text set value {"text":"B","color":"yellow","bold":true}
 
-execute if data storage skilltester:timers best.portal if score #rank_time timer_work matches 400.. run data modify entity @e[type=minecraft:text_display,tag=portal_rank_display,limit=1] text set value {"text":"CHUD","color":"red","bold":true}
+execute if data storage skilltester:timers best.portal if score #rank_time timer_work matches 280..319 run data modify entity @e[type=minecraft:text_display,tag=portal_rank_display,limit=1] text set value {"text":"D","color":"orange","bold":true}
+
+execute if data storage skilltester:timers best.portal if score #rank_time timer_work matches 320.. run data modify entity @e[type=minecraft:text_display,tag=portal_rank_display,limit=1] text set value {"text":"F","color":"red","bold":true}

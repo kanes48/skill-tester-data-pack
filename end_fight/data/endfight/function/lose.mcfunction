@@ -7,6 +7,8 @@ scoreboard players set @p endfight_deaths 0
 effect give @p minecraft:saturation 2 20
 effect give @p minecraft:regeneration 2 20
 
+kill @e[type=ender_pearl]
+
 tag @a[tag=endfight_active] remove endfight_active
 
 # Disallow block breaking by the dragon

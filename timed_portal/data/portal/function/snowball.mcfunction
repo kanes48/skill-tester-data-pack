@@ -1,5 +1,5 @@
 tag @s add used
-tp @p -27 82 -11
+tp @p -27 82 -11 180 20
 
 # Heal player
 effect give @p minecraft:saturation 2 20

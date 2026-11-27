@@ -1,0 +1,1 @@
+execute as @a[scores={crafting_active=1}] at @s run function crafting:check_items

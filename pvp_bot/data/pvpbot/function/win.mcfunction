@@ -9,7 +9,7 @@ title @a[tag=pvpbot.player] subtitle {"text":"You defeated the PvP Bot!","color"
 # Victory sound
 playsound minecraft:ui.toast.challenge_complete master @a[tag=pvpbot.player] ~ ~ ~ 1 1
 
-execute as @p run function skilltester:timer/stop {id:"pvpBot"}
+execute as @p run function skilltester:timer/stop {id:"pvpbot"}
 
 clear @p
 

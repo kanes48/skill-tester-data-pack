@@ -1,5 +1,0 @@
-
-
-192.168.178.25
-
-"Besitzer@192.168.178.25:C:/Users/Besitzer/Desktop/Minecraft Server/world/datapacks/"
